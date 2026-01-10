@@ -1,0 +1,37 @@
+Backtracking : 
+=================
+
+1. Backtracking me ham .. accumulate krte hai answers and ham target ki traf pahuchte hai.. Using the take and nottake .. approach 
+
+
+
+
+
+Memoization : Top Down Approach:
+==================================
+
+1. Isme target find krne ke liye ham .. remaining = target - a[i] ye krte hai.. and remaing data ko find krte hai ! not like 
+
+if taget = current_sum + a[i] finding 
+
+2. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
