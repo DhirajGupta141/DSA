@@ -1,0 +1,33 @@
+
+Fixed Sliding Window and Variable Sliding Window : 
+====================================================
+
+
+1. Fixed Sliding Window 
+=========================
+Problems: Find the longest subarray having sum = K 
+
+Window Answer : j - i - 1
+
+Common Way to start the Solution.. 
+i = 0 
+j = 0 
+while j < n: 
+    --> calc 
+    
+    if ans found : 
+        local_answer 
+    
+    while calc is not answer range:
+        i += 1 
+        calc update 
+    
+    j += 1
+    
+
+*******************************************************************************************************************************
+
+
+2. Variable Sliding Window
+
+
