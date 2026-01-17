@@ -7,7 +7,7 @@ Fixed Sliding Window and Variable Sliding Window :
 =========================
 Problems: Find the longest subarray having sum = K 
 
-Window Answer : j - i - 1
+Window Answer : j - i - 1 : Gives the length of the window 
 
 Common Way to start the Solution.. 
 i = 0 
