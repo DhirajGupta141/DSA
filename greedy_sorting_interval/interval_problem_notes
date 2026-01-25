@@ -1,0 +1,56 @@
+How to decide on which value the interval needs to be sorted ?
+------------------------------------------
+"End for Extend, Start for Merge"
+
+✔ Sort by END when you want to EXTEND a chain
+✔ Sort by START when you want to MERGE or SCAN
+
+------------------------------------------
+
+| Problem Goal                      | Correct Sort                      | Why                                   |
+| --------------------------------- | --------------------------------- | ------------------------------------- |
+| Max chain / max non-overlapping   | Sort by end                       | frees earliest time for next interval |
+| Merge intervals                   | Sort by start                     | sweep intervals left → right          |
+| Meeting rooms / minimum resources | Sort start[] and end[] separately | measure concurrency                   |
+| Weighted scheduling               | Sort by start                     | DP transitions                        |
+| Overlap detection                 | Sort by start                     | simple checks                         |
+| Greedy earliest finishing         | Sort by end                       | optimal scheduling                    |
+
+
+
+1️⃣ Sort by START time — when order of processing matters
+
+Used when you must process intervals as they arrive on a timeline
+
+Helps in detecting overlaps, merging, sweeping line
+Examples: Merge Intervals, Insert Interval, Meeting Rooms I
+
+2️⃣ Sort by END time — when your goal is to select maximum intervals
+
+Always choose the interval that finishes earliest — gives more room for upcoming intervals
+
+Used for maximum chain, activity selection, non-overlapping intervals
+Examples: Maximum Length Chain, Non-overlapping Intervals, Minimum Arrows to Burst Balloons
+
+3️⃣ Sort by START, tie-break by END — when interval boundaries matter
+
+Use when intervals may have same start but different lengths
+
+Ensures predictable ordering and avoids incorrect comparisons
+Examples: Scheduling, Ordering tasks, Nested interval checks
+
+4️⃣ Sort by END, tie-break by START — when comparing ranges tightly
+
+Needed when you want shortest finishing interval first, but also need consistent ordering
+
+Helps prevent choosing unnecessarily long intervals with same end
+Examples: Greedy selection variants, Choosing minimal covering intervals
+
+5️⃣ Special Sorting (by length, cost, custom rules) — when problem defines a metric
+
+Used when intervals have weights, profits, or priority
+
+Interval problems with custom decision criteria
+Examples: Weighted interval scheduling, CPU scheduling (shortest job first), custom DP
+
+
